@@ -107,10 +107,13 @@ USE_TZ = True
 
 STATIC_PATH = os.path.join(os.path.dirname(__file__), 'static')
 
+CUSTOM_STATIC_DIR = 'C:/Users/adaao/Documents/dev/blog_em_python/blog_com_python/static'
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
     STATIC_PATH,
+    CUSTOM_STATIC_DIR,
 )

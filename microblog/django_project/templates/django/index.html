@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+
+{% load staticfiles %}
+
+<html lang="pt-br">
 
     <head>
         <title>Django Index</title>
+        <meta charset="utf-8">
     </head>
 
     <body>
         <h2>Django diz pra você:</h2>
         olá, fulano! <b>{{ msgnegrito }}</b><br />
-        <a href="/django_app/sobre">Sobre</a>
+        <a href="/django_app/sobre">Sobre</a><br />
+        <img src="{% static "img/x.jpg" %}" alt="o miserável é um gênio"/>
     </body>
 
 </html>
