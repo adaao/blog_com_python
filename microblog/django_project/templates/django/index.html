@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-
-{% load staticfiles %}
+<!DOCTYPE html> {% load staticfiles %}
 
 <html lang="pt-br">
 
@@ -14,32 +12,26 @@
         
         {% include "django\cabecalho.html" %}
         
-        <div>
-            <fieldset>
-                <legend>Formulário de pessoa</legend>
-                <form>
-                    <table cellpadding='5'>
-                        
-                        <tr>
-                            <td>Nome:</td>
-                            <td><input type="text" name="nome" id="nome" /></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Endereço:</td>
-                            <td><input type="text" name="endereco" id="indereco" /></td>
-                        </tr>
+        <div class="container">
+            
+            <form class="form-signin">
+                <h2 class="form-sign-heading">Formulário de Pessoa</h2> 
+                
+                <label for="name" class="sr-only">Nome:</label>
+                <input type="text" id="nome" class="form-control" placeholder="Nome" required autofocus>
+                <br>
+                
+                <label for="endereco" class="sr-only">Endereço:</label>
+                <input type="text" id="endereco" class="form-control" placeholder="Endereço" required>
+                <br>
 
-                        <tr>
-                            <td>CPF:</td>
-                            <td><input type="text" name="cpf" id="cpf" /></td>
-                        </tr>
+                <label for="cpf" class="sr-only">CPF:</label>
+                <input type="text" id="cpf" class="form-control" placeholder="CPF" required>
+                <br>
+                
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
 
-                        <tr>
-                            <td colspan="2"><input type="submit" value="Enviar"/></td>
-                        </tr>
-                    </table>
-                </form>
+            </form>
             </fieldset>
         </div>
 
