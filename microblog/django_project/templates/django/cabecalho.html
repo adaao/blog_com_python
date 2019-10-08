@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="pt-br">
+
+    <head>
+        <title>Django Form Exemplo</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' href='{% static "css/cabecalho.css" %}' />
+    </head>
+
+    <body>
+        <div class='logo'>
+            <img src="{% static "img/logo-devmedia.png" %}" alt="Logo da DevMedia" />
+        </div>
+
+        <div class='menu'>
+            <a href="/django_app/sobre">Sobre</a>
+            <a href="/django_app/sair/">Sair</a>
+        </div>
+
+        <div class='bemvindo'>
+            <h2>Bem vindo ao nosso Site Django Exemplo!</h2>
+        </div>
+        
+    </body>
+
+</html>
