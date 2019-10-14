@@ -1,15 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response, get_object_or_404
+from django_app.models import Blog, Categoria
 from django.http import HttpResponse
 
 
 def index(request):
-    # Constrói um dicionário para passar ao template seu contexto.
-    # Note que a chave 'msgnegrito' representa o {{ msgnegrito }} no template!
-    dicionario_contexto = {'msgnegrito': "Testando fonte em negrito..."}
-  
-    # Retorna uma resposta renderizada para enviar ao cliente.
-    # Fazemos uso da função de atalho para facilitar tudo.
-    # Note que o primeiro parâmetro é o template que desejamos usar.
-    return render(request, 'django/index.html', dicionario_contexto)
+    return render_to_response('django\home.html', {
+        'categorias': Categoria.objects.all(),
+        'post': Blog.objects.all()[:5]
+    })
+
+
+def ver_post(request, slug):
+    return render_to_response('django\\ver_post.html', {
+        'categorias': Categoria.objects.all(), Categoria.
+        'post': get_object_or_404(Blog, url=slug)
+    })
+
+
+def ver_categoria(request, slug):
+    categoria = get_object_or_404(request, url=slug)
+    return render_to_response('django\\ver_categoria.html', {
+        'categoria': categoria,
+        'categorias': Categoria.objects.all(), 
+        'posts': Blog.objects.filter(categoria=categoria)[:5]
+    })
+
+
 
 

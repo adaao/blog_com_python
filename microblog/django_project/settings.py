@@ -58,8 +58,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATE_PATH],
-            #'C:/Users/adaao/Documents/dev/blog_em_python/blog_com_python/microblog/django_project/templates'],
-            #os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
