@@ -12,7 +12,7 @@ def index(request):
 
 def ver_post(request, slug):
     return render_to_response('django\\ver_post.html', {
-        'categorias': Categoria.objects.all(), Categoria.
+        'categorias': Categoria.objects.all(),
         'post': get_object_or_404(Blog, url=slug)
     })
 
